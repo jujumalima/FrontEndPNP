@@ -1,0 +1,60 @@
+.recipt {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px #505050;
+    padding: 20px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.recipt .heading {
+    text-align: center;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.recipt .details {
+    font-size: 16px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.recipt .details .sp {
+    float: right;
+}
+
+.recipt table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.recipt table tr td{
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.recipt .total {
+    margin-left: 30%;
+    margin-bottom: 20px;
+}
+
+.recipt .total span {
+    float: right;
+    padding-right: 75px;
+    font-weight: bold;
+}
+
+.recipt .foot {
+    text-align: center;
+}
+
+.btns {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

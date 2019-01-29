@@ -1,0 +1,69 @@
+<button mat-button class="bt" routerLink="/app-add-item">Click to Add an Item <mat-icon>add_circle_outline</mat-icon></button>
+<app-login-header></app-login-header>
+
+<div class="update">
+  <form [formGroup]="itemsData" (submit)="getItem()">
+    <mat-form-field>
+      <input matInput list="item" name="id" id="id" formControlName="id" required placeholder="Select an item to remove">
+    </mat-form-field>
+    <datalist id="item" >
+      <option *ngFor="let i of items" [value]="i.id">{{i.name}}</option>
+    </datalist>
+    <button mat-button>Select</button>
+  </form>
+
+
+  <table *ngIf="item">
+    <tr>
+      <td>
+        Name:
+      </td>
+      <td>
+        {{item?.name}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Barcode:
+      </td>
+      <td>
+        {{item?.barcode}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Brand:
+      </td>
+      <td>
+        {{item?.brand}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Price:
+      </td>
+      <td>
+        {{item?.price}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Unit:
+      </td>
+      <td>
+        {{item?.unit}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Weight:
+      </td>
+      <td>
+        {{item?.weight}}
+      </td>
+    </tr>
+
+  </table>
+  
+
+</div>

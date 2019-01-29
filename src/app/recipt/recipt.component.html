@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="receipt">
+  <div class="recipt">
+    <div class="heading">
+      <img src ='/app/images/header/onlineshopping_logo.png'>
+      <br/>
+      Online shopping
+    </div>
+
+    <div class="details" id="details">
+      <span style="font-size: 20px">Ref No.: </span> {{refNum}}
+      <span class="sp"><span style="font-size: 20px">Date:</span> {{date | date: 'dd'}}/{{date | date:'MM'}}/{{date | date: 'yyyy'}}</span>
+    </div>
+
+    <table>
+      <tr *ngFor="let i of items">
+        <td style="width:65%">{{i.name}}</td>
+        <td style="width:5%">{{i.quantity}}</td>
+        <td style="width:20%">R {{i.price.toLocaleString().substring(0,i.price.toLocaleString().indexOf('.')+3)}}</td>
+      </tr>
+    </table>
+
+    <div class="total">
+      Total cost of {{numItms}} items: <span>R {{totCost.toLocaleString().substring(0, totCost.toLocaleString().indexOf('.')+3)}}</span>
+    </div>
+
+    <div class="foot">
+      Cell: {{customer?.cellNum}}
+      <br/>
+      Address: {{delivery?.address}}
+      <br/>
+      Email: {{customer?.email}}
+    </div>
+  </div>
+
+  <div class="btns">
+    <button mat-button (click)="downloadPdf()">Export Recipt to PDF <i class="fa fa-file-pdf-o" style="font-size: 20px"></i></button> 
+    <br/>
+    <button mat-button (click)="pop()">Save Receipt to Email <mat-icon>email</mat-icon></button> 
+    <br/>
+    <button mat-button (click)="signOut()">Signout <i class="fa fa-sign-out" style="font-size: 20px"></i></button>
+  </div>
+</div>
+<app-footer></app-footer>

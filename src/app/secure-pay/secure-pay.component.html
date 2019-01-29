@@ -1,0 +1,88 @@
+<header>
+  <img src="/app/images/secure-pay/PayU.png">
+</header>
+<div class="secPay">
+  <div class="left">
+    <div class="top">
+      <img src="app/images/secure-pay/pnp.jpg">
+      
+      <p>
+        Pick n Pay
+        <br/>
+        Pick n Pay
+      </p>
+    </div>
+    <div class="bot">
+      Amount Due <span>R2.00</span>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="top">
+      <div class="top-right">
+        <input type="radio" checked> card
+      </div>
+      
+      <img src="app/images/secure-pay/visa.png">
+      <img src="app/images/secure-pay/mcard.png">
+      <img src="app/images/secure-pay/amex.png">
+      <img src="app/images/secure-pay/dclub.png">
+    </div>
+    <div class="bot">
+        We accept major cards including VISA and MasterCard. The accepted card options are provided above.
+        <form [formGroup]="payment" (submit)="savePayment()"> 
+          <table>
+            <tr>
+              <td class="td1">Card number</td>
+              <td class="td2"><input type="number" id="cardnum" name="cardnum" required formControlName="cardnum"></td>
+            </tr>
+            <tr>
+              <td class="td1">Card holder name</td>
+              <td class="td2"><input type="text" id="name" name="name" required formControlName="name"></td>
+            </tr>
+            <tr>
+              <td class="td1">Expiry date</td>
+              <td class="td2">
+                  <input type="month" id="exdate" name="exdate" required formControlName="exdate"> 
+              </td>
+            </tr>
+            <tr>
+              <td class="td1">CVV number</td>
+              <td class="td2"><input type="number" id="cvv" name="cvv" required formControlName="cvv"></td>
+            </tr>
+          </table>
+
+          <div class="conf">
+            PayU <span style="color: #a6c307;">User Agreement</span> and <span style="color: #a6c307;">Privacy Policy</span>.
+            <br/>
+            
+            <button style="color:#fff; background-color:#a6c307;">Continue</button>
+            
+            <br/>
+            <span style="font-size: 10px;">*You may be redirected to your bank's secure site to 
+            <br/>
+            authenticate yourself before making payment.</span>
+          </div>
+        </form>
+        <button style="background-color: #fff; border:solid 1px #a6c307; float: right; margin-top: -78px; margin-right: 370px;">Cancel</button>
+    </div>
+  </div>
+</div>
+<footer>
+  <img src="app/images/secure-pay/sysnet.png">
+  <img src="app/images/secure-pay/entrust.png">
+  <img src="app/images/secure-pay/pci.png">
+  <br/>
+  <br/>
+  <span style="color: #438f29;"> Legal Information </span> | Copyright PayU All Rights Reserved &#0169; 2014
+</footer>
+
+<div *ngFor="let item of items">
+</div>
+
+<div *ngFor="let crt of cart">
+</div>
+
+<div *ngFor="let i of itemz">
+  
+</div>

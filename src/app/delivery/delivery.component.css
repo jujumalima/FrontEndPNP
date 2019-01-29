@@ -1,0 +1,133 @@
+.trolley {
+    margin: 50px 50px 30px 50px;
+    color: #575757;
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    width: 70%;
+}
+
+.trolley .p1{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.trolley .lst {
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.trolley .lst p {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 5% 0 9%;
+    border-bottom: solid 5px #f2f2f2;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.trolley .lst span {
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    padding-top: 2px;
+    margin-left: 55px;
+    width: 20px;
+	height: 20px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.trolley .collect {
+    border: solid 1px #ccc;
+    width: 97%;
+    margin-top: 20px;
+}
+
+.trolley .collect .address {
+    margin: 40px;
+}
+
+.trolley .collect h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fcac00 !important;
+}
+
+.trolley .collect h1 span {
+    border-radius: 50%;
+    float: left;
+    width: 37px;
+    height: 37px;
+    color: #fff;
+    background-color: #fcac00;
+    padding: 4px 0 0 0;
+    font-size: 24px;
+    margin-top: -10px;
+    margin-right: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.trolley .collect .slot {
+    margin: 40px;
+}
+
+.delType {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.delType1 {
+    display:inline-block;
+    margin-right: 10px;
+    background-color: #fcac00;
+}
+
+.delType1 img {
+    width: 270px;
+    height: 365px;
+}
+
+.tri {
+    width: 0;
+	height: 0;
+	border-left: 135px solid transparent;
+    border-right: 135px solid transparent;
+    background-color: #fff;
+}
+
+.trolley form {
+    border: solid 1px #ccc;
+    width: 97%;
+    margin-top: 20px;
+    padding: 50px;
+}
+
+.trolley form input {
+    width: 550px;
+    height: 35px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.trolley form p {
+    font-family: Arial, sans-serif, Helvetica;
+    font-size: 15px;
+    color: #929292;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.trolley form button {
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #b9154a;
+    font-weight: bold;
+}

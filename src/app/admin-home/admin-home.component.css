@@ -1,0 +1,19 @@
+div {
+    text-align: center;
+    margin-top: 250px;
+}
+
+.btn1 {
+    background-color: #52ae32;
+    margin-right: 30px;
+}
+
+.btn2 {
+    background-color: #fbb601;
+    margin-left: 30px;
+}
+
+.btn3 {
+    background-color: #b61a4c;
+    margin-top: 60px;
+}

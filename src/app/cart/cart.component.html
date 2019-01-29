@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<div class="trolley">
+  <p class="p1"><span style="font-weight: bold;">View</span> Trolley</p>
+
+  <div class="lst">
+      <span>1</span>
+      <p style="border-color: #8bdb6f;"> View Trolley </p>
+      <span>2</span>
+      <p> Delivery details </p>
+      <span>3</span>
+      <p> Order summary </p>
+      <span>4</span>
+      <p> Checkout </p>
+  </div>
+
+  <div class="myTrolley">
+    <div class="panel"></div>
+    <div class="substitute"></div>
+    <div class="filter">
+      <button class="select" (click)="slct()">{{select}}</button>
+      <button class="collaps" (click)="clp()">{{collaps}}</button>
+      <button class="save">save to shopping cart</button>
+      <button class="remove">remove selected items</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <td style="width:25%;padding-left: 15px;">PRODUCT</td> 
+          <td style="width:25%;">DESCRIPTION</td>
+          <td style="width:25%;">QTY</td>
+          <td style="width:25%;">PRICE</td>
+        </tr>
+      </thead>
+      <tr class="tritems" *ngFor="let items of itms">
+          <td valign="top">
+            <mat-checkbox color="warn"></mat-checkbox>
+            <img src="/app/images/items/product{{items.pid}}/{{items.image}}" style="height: 130px;">
+          </td>
+          <td valign="top">
+            {{items.name}} {{items.weight}}</td>
+          <td valign="top">
+            <button style="width: 35px; height: 35px; color: #fff; background-color: #ccc; border: none;" (click)="subqty(items)">
+              -
+            </button>
+              {{items.quantity}}
+            <button style="width: 35px; height: 35px; color: #fff; background-color: #ccc; border: none;" (click)="addqty(items)">
+              +
+            </button>
+          </td>
+          <td valign="top">
+            <p class="normalPrice">
+              R{{items?.price.toLocaleString().substring(0,items?.price.toLocaleString().indexOf('.'))}}<span>{{items?.price.toLocaleString().substring(items?.price.toLocaleString().indexOf('.')+1, items?.price.toLocaleString().indexOf('.')+3)}}</span>
+              <button class="rmv" (click)="rmvItem(items)">X</button>
+            </p>
+          </td>
+        </tr>
+    </table>
+
+    <div *ngIf="!itms?.length > 0">
+        <b>Look at this shiny new trolley</b>, just waiting to be filled. Start shopping now!
+    </div>
+    <button style="width: 100%;background-color: #52ae32; color: #fff;" *ngIf="itms?.length > 0" (click)="checkout()">Checkout</button>
+  </div>
+</div>
+<app-footer></app-footer>

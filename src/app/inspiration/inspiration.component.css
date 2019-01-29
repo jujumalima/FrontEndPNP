@@ -1,0 +1,22 @@
+.inspiration {
+    margin: 0 50px 0 50px;
+}
+
+p {
+    margin-top: 30px;
+    font-family: arial, sans-serif, Helvetica;
+    font-style: normal;
+    font-size: 14px;
+    color: #575757;
+    font-weight: bold;
+    text-align: center;
+}
+
+img {
+    width: 370px;
+    margin: 5px;
+}
+
+.header {
+    width: 100%;
+}

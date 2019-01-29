@@ -1,0 +1,149 @@
+header {
+    height: 65px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-bottom: 3px solid #e6e6e6;
+}
+
+header img {
+    float: right;
+    margin-right: 80px;
+}
+
+.secPay {
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+
+.left {
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+    width: 20%;
+    float: left;
+}
+
+.left .top {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.left .top p {
+    text-align: left;
+}
+
+.left .bot {
+    text-align: left;
+    background-color: #a6c307;
+    width: 100%;
+    color: #fff;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.left .bot span {
+    float: right;
+    font-size: 18px;
+}
+
+.right {
+    display: inline-block;
+    border: 2px solid #d6d6d6;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 30px;
+    height: 450px;
+    background-color: #fafafa;
+}
+
+.right .top {
+    background-color: #e6e6e6;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    height: 50px;
+    padding: 15px;
+}
+
+.right .top .top-right {
+    width: 200px;
+    border-right: solid 1px #ddd;
+    float: left;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.right .top img {
+    padding-left: 15px;
+    height: 30px;
+    margin-top: -5px;
+}
+
+.right .top .top-right:hover {
+    border-right: 1px solid #d6d6d6;
+}
+
+.right .bot {
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.right .bot table {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.right .bot table tr .td1 {
+    width: 180px;
+     text-align: right
+}
+
+.right .bot table tr .td2 {
+    padding-left: 30px;
+}
+
+.right .bot table tr .td2 input {
+    border-radius: 10px;
+    height: 35px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.right .bot table tr {
+    height: 50px;
+}
+
+.right .bot .conf {
+    margin-left: 210px;
+}
+
+button {
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+footer {
+    border-top: 3px solid #e6e6e6;
+    text-align: center;
+    padding-top: 20px;
+    color: gray;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+footer img {
+    height: 40px;
+}

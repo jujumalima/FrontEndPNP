@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div *ngIf="prod == null" style="font-size:30px;text-align: center;">
+  <br/>
+  Opps! Something went wrong &#x263A;!
+  <br/>
+  <img src="/app/images/loading.gif">
+</div>
+<div class="banner" *ngIf="prod != null">
+  <img src="/app/images/product/{{aisle1.image.substring(0,aisle1.image.indexOf('.'))}}/0.jpg">
+  <p>{{aisle1?.name}}</p>
+</div>
+<div class="product">
+  <div class="productBody">
+    <ul>
+      <li class="productItem" *ngFor="let product of prod; let i = index;">
+        <div (click)="setProduct(product)">
+          <img src="/app/images/product/{{aisle1.image.substring(0,aisle1.image.indexOf('.'))}}/{{product.image}}">
+          <p>{{product?.name}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--<div class="fltRight" *ngIf="prod != null">
+    <button class="ss"></button>
+    <img src="/app/images/aisle/delivery.JPG" class="delivery">
+    <div>
+        Do we deliver to your area?
+        <input placeholder="Please Select a City">
+        <input placeholder="Select City From List">
+        <button>Suggest Your Surbub</button>
+    </div>
+  </div>-->
+</div>
+<app-footer></app-footer>

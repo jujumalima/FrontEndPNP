@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div *ngIf="aisleMod == null" style="font-size:30px;text-align: center;">
+  <br/>
+  Opps! Something went wrong&#x263A;!
+  <br/>
+  <img src="/app/images/loading.gif">
+</div>
+<div class="banner" *ngIf="aisleMod != null">
+  <p>SHOP</p>
+</div>
+
+<div class="aisle">
+  <div class="aisleBody">
+    <ul>
+      <li class="aisleItem" *ngFor="let aisleData of aisleMod;">
+        <div (click)="setAisle(aisleData)">
+          <img src="/app/images/aisle/{{aisleData.image}}">
+          <p>{{aisleData.name}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--<div class="fltRight" *ngIf="aisleMod != null">
+    <button class="ss"></button>
+    <img src="/app/images/aisle/delivery.JPG" class="delivery">
+    <div>
+        Do we deliver to your area?
+        <input placeholder="Please Select a City">
+        <input placeholder="Select City From List">
+        <button>Suggest Your Surbub</button>
+    </div>
+  </div>-->
+</div>
+<app-footer></app-footer>

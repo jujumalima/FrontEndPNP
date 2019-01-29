@@ -1,0 +1,40 @@
+.recipes {
+    margin: 0 50px 10px 50px;
+}
+
+.header {
+    width: 100%;
+}
+
+.banner {
+    margin: 10px 0 10px 0;
+}
+
+.itms {
+    display: inline-block;
+}
+
+#myCarousel1, #myCarousel2, #myCarousel3, #myCarousel4, 
+#myCarousel5, #myCarousel6, #myCarousel7, #myCarousel8, 
+#myCarousel9, #myCarousel10, #myCarousel11, 
+#myCarousel12, #myCarousel13 {
+    height: 480px;
+}
+
+.carousel-indicators {
+    top: 460px;
+}
+
+.carousel-indicators li {
+    background: #d6d6d6;
+    width: 13px;
+    height: 13px;
+    margin: 5px;
+    border: none;
+    position: relative;
+    z-index: -1;
+}
+
+ol.carousel-indicators li.active {
+    background: #869791;
+}

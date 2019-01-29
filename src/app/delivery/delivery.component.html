@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<div class="trolley">
+  <p class="p1"><span style="font-weight: bold;">Delivery</span> Details</p>
+
+  <div class="lst">
+      <span><mat-icon style="margin-top:-5px;margin-left:-3px;color: #52ae32;;">check_circle</mat-icon></span>
+      <p style="border-color: #52ae32;"  routerLink="/app-cart"> View Trolley </p>
+      <span>2</span>
+      <p style="border-color: #8bdb6f;"> Delivery details </p>
+      <span>3</span>
+      <p> Order summary </p>
+      <span>4</span>
+      <p> Payment </p>
+  </div>
+
+  <div>
+    <img src="/app/images/delivery/del1.JPG">
+  </div>
+  
+  <!--<div  class="delType">
+    <div class="delType1" style="background-color: #52ae32;">
+        <img src="/app/images/delivery/d1.JPG">
+        <div class="tri" style="border-top: solid 50px #52ae32;">
+          
+        </div>
+    </div>
+    <div class="delType1" style="background-color: #fcac00;">
+        <img src="/app/images/delivery/d2.JPG">
+        <div class="tri" style="border-top: solid 50px #fcac00;">
+          
+        </div>
+    </div>
+    <div class="delType1" style="background-color: #b9154a;">
+        <img src="/app/images/delivery/d3.JPG">
+        <div class="tri" style="border-top: solid 50px #b9154a;">
+          
+        </div>
+    </div>
+  </div>
+  <div class="collect">
+    <div class="address">
+      <h1><span>1</span> CLICK N COLLECT ADDRESS</h1>
+
+      <div class="region">
+        <p>Region</p>
+        <mat-form-field>
+          <mat-select [(value)]="selected" style="text-transform: uppercase">
+            <mat-option disabled>PLEASE SELECT A REGION</mat-option>
+            <mat-option *ngFor="let r of region" value={{r.name}} (click)="selectStore(r.id)" style="text-transform: uppercase">{{r.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div *ngFor="let s of store">
+          {{s?.name}}<br/>
+        </div>
+      </div>
+      
+    </div>
+    <div class="slot">
+      <h1><span>2</span> BOOK A SLOT</h1>
+    </div>
+  </div>-->
+  <form [formGroup]="addr" (submit)="createAddr()">
+    <button type="button" mat-button (click)="addAddr()">ADD AN ADDRESSS</button>
+
+    <div *ngIf="add == 1">
+      <p>*Type your full street address:</p>
+      <input type="address" id="address" required formControlName="address" placeholder="40, street name, suburb, city">
+
+      <p>Apartment, Building, Floor and/or Company Name:</p>
+      <input type="name" id="name" required formControlName="name" >
+
+      <p>Address nickname:</p>
+      <input type="nickname" id="nickname" required formControlName="nickname" placeholder="e.g. Home">
+
+      <br/>
+      <button mat-button style="margin-top:50px;">SUBMIT</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

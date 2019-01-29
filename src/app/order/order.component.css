@@ -1,0 +1,78 @@
+.trolley {
+    margin: 50px 50px 30px 50px;
+    color: #575757;
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    width: 70%;
+}
+
+.trolley .p1{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.trolley .lst {
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.trolley .lst p {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 5% 0 9%;
+    border-bottom: solid 5px #f2f2f2;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.trolley .lst span {
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    padding-top: 2px;
+    margin-left: 55px;
+    width: 20px;
+	height: 20px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.ref {
+    color: #fff;
+    background-color: #575757;
+    font-size: 15px;
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 97%;
+}
+
+input {
+    border: none;
+    float: right;
+    margin-right: 10px;
+    height: 20px;
+    width: 330px;
+    color: #575757;
+}
+
+button {
+    margin-top: 20px;
+    float: right;
+    border: none;
+    background-color: #63b646;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 3%;
+    height: 38px;
+    width: 180px;
+}
+
+button:hover {
+    background-color: #52ae32;
+}

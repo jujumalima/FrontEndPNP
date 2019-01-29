@@ -1,0 +1,47 @@
+div {
+    margin: 150px;
+    margin-top: 50px;
+}
+
+button {
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px; 
+}
+
+.item input {
+    font-size: 20px;
+    width: 500px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+.item input:hover {
+    border-bottom: 2px solid #000;
+}
+
+.item {
+    text-align: center;
+}
+
+.item p {
+    font-size: 20px;
+}
+
+mat-option {
+    text-transform: capitalize;
+}
+
+.item button {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 330px;
+    margin-top: -100px;
+    width: 300px;
+    height: 50px;
+    background-color: #52ae32;
+}

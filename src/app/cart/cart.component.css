@@ -1,0 +1,124 @@
+.trolley {
+    margin: 50px 50px 30px 50px;
+    color: #575757;
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    width: 70%;
+}
+
+.trolley .p1{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.trolley .lst {
+    font-family: Arial, "Open Sans", Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.trolley .lst p {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 5% 0 9%;
+    border-bottom: solid 5px #f2f2f2;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+.trolley .lst span {
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    padding-top: 2px;
+    margin-left: 55px;
+    width: 20px;
+	height: 20px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+}
+
+.trolley .myTrolley {
+    margin-right: 2%;
+    margin-left: 1%;
+}
+
+.trolley .myTrolley .panel {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100px;
+    background: url("/app/images/cart/panel.JPG");
+    
+}
+
+.trolley .myTrolley button {
+    background-color: #fff;
+    width: 22.5%;
+    height: 40px;
+    border: solid 1px #aaa;
+    margin: 0 10px 0 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #8b8c8c;
+    text-transform: uppercase;
+}
+
+.trolley .myTrolley table{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.trolley .myTrolley table thead {
+    padding-right: 10px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+}
+
+.trolley .myTrolley table thead tr {
+    height: 50px;
+}
+
+.trolley .myTrolley table thead tr td {
+    font-size: 15px;
+    font-weight: bold;
+    color: #676767;
+}
+
+.tritems {
+    border-top: 1px solid #ccc; 
+    height: 150px;
+}
+
+.tritems td {
+    width:25%;
+    padding-top: 10px;
+}
+
+.normalPrice {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.normalPrice span {
+	font-size: 10px;
+	position: relative;
+	top: -6px;
+	left: 1px;
+}
+
+table tr td .rmv {
+    position: inherit;
+    color: #cccccc;
+    font-size: 10px;
+    border: 1px solid #cccccc !important;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+}

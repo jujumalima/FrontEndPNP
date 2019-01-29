@@ -1,0 +1,37 @@
+<app-login-header></app-login-header>
+<div class="login">
+  <h1>Welcome to Pick n Pay Online</h1>
+  <div>
+    <form [formGroup]="loginCust" (submit)="custLogin()">
+      <table>
+        <tbody>
+          <tr>
+            <td class="td1"><label>Email/username</label></td>
+            <td class="td2">
+              <input type="text" id="email" name="email" required formControlName="email">
+            </td>
+          </tr>
+          <tr style="height:5px;"></tr>
+          <tr>
+            <td class="td1"><label>Password</label></td>
+            <td class="td2">
+              <input type="password" id="password" name="password" required formControlName="password">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        <div class="errors">{{frmErroffrs}}</div>
+        <button class="btn2" type="submit">Log in</button>
+    </form>
+    <button class="btn1" routerLink="/app-register-online">Sign up</button>
+    <div style="margin-bottom: 80px;"></div>
+    <div class="tip">
+      <p>
+        <b>Tip</b>: Ever registered on our website or app?
+        <br> If so, simply use your same login details here.
+        <br>Easy peasy!
+      </p>
+      <a routerLink="/app-forget-password">Forgot your password?</a>
+    </div>
+  </div>
+</div>

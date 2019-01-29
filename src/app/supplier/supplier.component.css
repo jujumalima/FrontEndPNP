@@ -1,0 +1,13 @@
+.heading {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table{
+    width: 90%;
+    margin: 50px;
+}

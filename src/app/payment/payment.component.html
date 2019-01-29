@@ -1,0 +1,58 @@
+<app-header></app-header>
+
+<div class="trolley">
+  <p class="p1"><span style="font-weight: bold;">Payment</span></p>
+
+  <div class="lst">
+      <span><mat-icon style="margin-top:-5px;margin-left:-3px;color: #52ae32;">check_circle</mat-icon></span>
+      <p style="border-color: #52ae32;"  routerLink="/app-cart"> View Trolley </p>
+      <span><mat-icon style="margin-top:-5px;margin-left:-3px;color: #52ae32;">check_circle</mat-icon></span>
+      <p style="border-color: #52ae32;"  routerLink="/app-delivery"> Delivery details </p>
+      <span><mat-icon style="margin-top:-5px;margin-left:-3px;color: #52ae32;">check_circle</mat-icon></span>
+      <p style="border-color: #52ae32;"  routerLink="/app-order"> Order summary </p>
+      <span>4</span>
+      <p style="border-color: #8bdb6f;"> Payment </p>
+  </div>
+
+  <img src="app/images/payment/ban.JPG" style="width:96%">
+  
+  <div class="payment">
+    <div class="payMeth">
+      <div class="top">
+        <mat-icon style="padding-right:50px; font-size:40px;">payment</mat-icon>
+        <p style="display: inline-block;">CHOOSE YOUR <br/>PAYMENT METHOD</p>
+      </div>
+      <div class="bot">
+        CREDIT CARD 
+        <mat-icon style="float:right; font-size: 15px;">arrow_forward_ios</mat-icon>
+      </div>
+    </div>
+
+    <div class="pay">
+
+        
+        Pay with a credit card, your switched Smart Shopper points or a combination of both.
+
+        <img src="app/images/payment/ban2.JPG">
+
+        <br/><br/><br/><br/><br/>
+        <b>NEW:</b> We’ve implemented a new payment procedure at PnP Online. Here’s how it works:
+
+        <br/><br/><br/>
+        <mat-icon>check</mat-icon><b>Pre-authorisation at checkout (now): R2 is reserved against your credit card</b> to make sure your card details are correct. The R2 is immediately refunded to you. This will ensure that we’re able to process your payment on the day of picking and deliver your order to you as expected. You’ll also have the option of securely saving your card details for faster, easier checkout in future, and we won’t have to pre-authorise your card each time.
+        <br/><br/><br/>
+        <mat-icon>check</mat-icon><b>Day before delivery:</b> We reserve payment for your order.
+        <br/><br/><br/>
+        <mat-icon>check</mat-icon><b>Day of delivery:</b> We debit your account for the final invoiced amount of your order.
+
+        <br/><br/><br/>
+        Questions? Read our FAQs or call 0860 30 30 30.
+
+        <br/><br/><br/>
+        <button (click)="securePay()">PAY WITH YOUR CARD</button>
+        <br/><br/><br/>
+        <img src="app/images/payment/ban3.JPG">
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

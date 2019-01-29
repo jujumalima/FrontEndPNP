@@ -1,0 +1,86 @@
+<header>
+  <div class="nav-top" >
+      YOU ARE BROWSING: <u>Gauteng Online</u>
+        <form *ngIf="cust?.name == null">
+            <button><u><a routerLink="/app-login">LOG IN</a></u></button>
+            |
+            <button><u><a routerLink="/app-register-online">SIGN UP</a></u></button>
+        </form>
+
+        <span class="drpdown">
+            <div class="cst" *ngIf="cust?.name != null">
+                Hello, {{cust.name}}! Your Account <mat-icon style="float: right;margin-top:-5px">expand_more</mat-icon>
+                <div class="drpdown-content">
+                    <a (click)="signOut()" style="border-top: solid 1px #fff;">NOT {{cust.name}}? SIGN OUT</a>
+                </div>
+            </div>
+        </span>
+  </div>
+
+  <div class="nav-middle">
+      <div class="logo">
+          <a routerLink="/app-home"><img src ='/app/images/header/onlineshopping_logo.png'></a>
+      </div>
+      <div class="flt-right">
+          <form>
+            <input type="search" name="search" placeholder="I'm looking for"><button class="gicon-btn"><span class="glyphicon glyphicon-search"></span></button>
+            <button mat-raised-button type="submit" name="favourites" class="btn1" routerLink="/app-not-found">
+                <mat-icon style="font-size:20px;">favorite_border</mat-icon> 
+                FAVOURITES
+            </button>
+            <button mat-raised-button type type="submit" name="shopList" class="btn2" routerLink="/app-not-found">
+                <mat-icon>list</mat-icon>
+                SHOPPING LIST
+            </button>
+            <img src="/app/images/header/delivery-icon-nav.png"  (click)="delivery()">
+            <div class="qty">{{numItmz}}</div>
+            <img class="trolley" src="/app/images/header/trolley.png" routerLink="/app-cart">
+          </form>
+      </div>
+
+  </div>
+  <div class="nav-bottom">
+      <div class="dropdown">
+          <button routerLink="/app-aisle" class="dropbtn">SHOP BY AISLE</button>
+          <div class="dropdown-content">
+              <a *ngFor="let aisleM of aisleMod" (click)="setAisle(aisleM)">{{aisleM.name}}</a>
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn" routerLink="/app-not-found">SPECIALS</button>
+          <div class="dropdown-content">
+
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn" routerLink="/app-inspiration">INSPERATION & OCCASIONS</button>
+          <div class="dropdown-content">
+
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn" routerLink="/app-recipes">RECIPES</button>
+          <!--<div class="dropdown-content">
+              <a routerLink="/app-not-found">SUMMER SAVINGS</a>  
+              <a routerLink="/app-not-found">ITALIAN FESTIVAL</a>
+              <a routerLink="/app-not-found">NEW FRESHRANGE</a>
+              <a routerLink="/app-not-found">BRAAI</a>
+              <a routerLink="/app-not-found">BURGER FRIDAYS!</a>
+              <a routerLink="/app-not-found">SOIREE WITH PICK N PAY</a>
+              <a routerLink="/app-not-found">ALL ABOUT GIN</a>
+              <a routerLink="/app-not-found">HERITAGE DAY RECIPES</a>
+          </div>-->
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn" routerLink="/app-competition">COMPETITIONS</button>
+          <div class="dropdown-content">
+
+          </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn" routerLink="/app-catalougue">IN-STORE CATALOGUES</button>
+          <div class="dropdown-content">
+          </div>
+      </div>
+  </div>
+</header>

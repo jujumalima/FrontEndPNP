@@ -1,0 +1,50 @@
+<button mat-button (click)="logout()" style="float:right; margin-top: 15px; margin-right: 50px;">
+  LOGOUT
+</button>
+<app-login-header></app-login-header>
+
+<div class="heading">
+  Items to be Delivered
+</div>
+<table style="width:100%">
+  <tr>
+    <td style="width:6%;border: 1px solid">OrderNum</td>
+    <td style="width:15%;border: 1px solid">Item Name</td>
+    <td style="width:5%;border: 1px solid">Unit(s)</td>
+    <td style="width:5%;border: 1px solid">Weight</td>
+    <td style="width:5%;border: 1px solid">Quantity</td>
+    <td style="width:12%;border: 1px solid">Customer Name</td>
+    <td style="width:12%;border: 1px solid">Surname</td>
+    <td style="width:15%;border: 1px solid">Address</td>
+    <td style="width:12%;border: 1px solid">Addr Name</td>
+    <td style="width:12%;border: 1px solid">Addr Nickname</td>
+  </tr>
+</table>
+<table style="width:100%">
+  <div *ngFor="let crt of cart">
+    <div *ngFor="let i of item">
+      <div *ngFor="let c of customer">
+        <div *ngFor="let d of delivery">
+          <div *ngIf="d.id == crt.did">
+            <div *ngIf="i.id == crt.iid">
+              <div *ngIf="c.id == crt.cid">
+                <tr>
+                  <td style="width:6%;border: 1px solid">{{crt.ordernum}}</td>
+                  <td style="width:15%;border: 1px solid">{{i.name}}</td>
+                  <td style="width:5%;border: 1px solid">{{i.unit}}</td>
+                  <td style="width:5%;border: 1px solid">{{i.weight}}</td>
+                  <td style="width:5%;border: 1px solid">{{crt.quantity}}</td>
+                  <td style="width:12%;border: 1px solid">{{c.name}}</td>
+                  <td style="width:12%;border: 1px solid">{{c.surname}}</td>
+                  <td style="width:15%;border: 1px solid">{{d.address}}</td>
+                  <td style="width:12%;border: 1px solid">{{d.name}}</td>
+                  <td style="width:12%;border: 1px solid">{{d.nickname}}</td>
+                </tr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</table>

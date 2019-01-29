@@ -1,0 +1,14 @@
+<button mat-button (click)="logout()" style="float:right; margin-top: 15px; margin-right: 50px;">
+    LOGOUT
+  </button>
+<app-login-header></app-login-header>
+
+<form [formGroup]="itemsData" (submit)="itemRemove()">
+  <mat-form-field>
+    <input matInput list="item" name="id" id="id" formControlName="id" required placeholder="Select an item to remove">
+  </mat-form-field>
+  <datalist id="item" >
+    <option *ngFor="let i of items" [value]="i.id">{{i.name}}</option>
+  </datalist>
+  <button mat-button>Remove</button>
+</form>

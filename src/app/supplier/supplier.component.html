@@ -1,0 +1,32 @@
+<button mat-button (click)="logout()" style="float:right; margin-top: 15px; margin-right: 50px;">
+    LOGOUT
+  </button>
+  <app-login-header></app-login-header>
+
+  <div class="heading">
+    SUPPLY
+  </div>
+
+  <table>
+    <tr>
+      <td>BARCODE</td>
+      <td>NAME</td>
+      <td>BRAND</td>
+      <td>WEIGHT</td>
+      <td>UNIT(S)</td>
+      <td>AVAILABLIE</td>
+      <td>UPDATE</td>
+    </tr>
+    <br/>
+    <tr *ngFor="let i of items">
+      <td *ngIf="i.itemsavailable < 20">{{i.barcode}}</td>
+      <td *ngIf="i.itemsavailable < 20">{{i.name}}</td>
+      <td *ngIf="i.itemsavailable < 20">{{i.brand}}</td>
+      <td *ngIf="i.itemsavailable < 20">{{i.weight}}</td>
+      <td *ngIf="i.itemsavailable < 20">{{i.unit}}</td>
+      <td *ngIf="i.itemsavailable < 20">{{i.itemsavailable}}</td>
+      <td *ngIf="i.itemsavailable < 20">
+        <button mat-button (click)="updateItem(i)">ADD {{50 - i.itemsavailable}} items</button>
+      </td>
+    </tr>
+  </table>

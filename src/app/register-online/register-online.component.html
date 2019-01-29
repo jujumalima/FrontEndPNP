@@ -1,0 +1,161 @@
+<app-register-header></app-register-header>
+<div class="register">
+  <h1>Register for Pick n Pay Online</h1>
+  <div class="div2">
+    <h2>Sign up in seconds to start shopping online, and get groceries and <br/> delivered to your door.</h2>
+    <div class="ulDiv">
+      <div class="line"></div>
+      <form [formGroup]="regOnlineCust" (submit)="createOnlineCust()">
+        <table>
+          <tbody>
+            <tr>
+              <td style="width:225px;">
+                <label>First Name</label>
+              </td>
+              <td style="width:285px;">
+                <input type="text" id="name" name="name" required formControlName="name">
+              </td>
+              <td class="erros" style="border:none;" *ngIf="!regOnlineCust.controls.name.valid && regOnlineCust.controls.name.touched">
+                Enter your first name.
+              </td>
+              <td class="erros" style="border:none;" *ngIf="!regOnlineCust.controls.name.valid && regOnlineCust.controls.name.untouched">
+                Enter your first name.
+              </td>
+              <td class="erros" style="border:none;" *ngIf="regOnlineCust.controls.name.value == '/1'">
+                Enter your first name.
+              </td>
+            </tr>
+            <tr style="height:5px;"></tr>
+            <tr>
+              <td style="width:225px;">
+                <label>Surname</label>
+              </td>
+              <td style="width:285px;">
+                <input type="text" id="surname" name="surname" required formControlName="surname">
+              </td>
+              <td class="erros" style="border:none;" *ngIf="!regOnlineCust.controls.surname.valid && regOnlineCust.controls.surname.touched">
+                Enter your surname.
+              </td>
+            </tr>
+            <tr style="height:5px;"></tr>
+            <tr>
+              <td>
+                <label>Email address</label>
+              </td>
+              <td>
+                <input type="email" id="email" required formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" >
+              </td>
+              <td class="erros" style="border:none;" *ngIf="!regOnlineCust.controls.email.valid && regOnlineCust.controls.email.touched">
+                You'll log in with your email address.
+              </td>
+              <td class="erros" style="border:none;color:green;" *ngIf="regOnlineCust.controls.email.valid && regOnlineCust.controls.email.valid != ''">
+                &#x2713; Email address looks good.
+              </td>
+            </tr>
+            <tr style="height:5px;"></tr>
+            <tr>
+              <td>
+                <label>Password</label>
+              </td>
+              <td>
+                <input type="password" id="password" required minlength="8" formControlName="password">
+              </td>
+              <td class="erros" style="border:none;" *ngIf="!regOnlineCust.controls.password.valid && regOnlineCust.controls.password.touched"  >
+                We need eight characters and one must be a number.
+              </td>
+              <td class="erros" style="border:none;color:green;" *ngIf="regOnlineCust.controls.password.valid">
+                &#x2713; Your password is strong enough.
+              </td>
+            </tr>
+            <tr style="height:5px;"></tr>
+            <tr>
+              <td>
+                <label>Confirm password</label>
+              </td>
+              <td>
+                <input type="password" id="confPassword" required formControlName="confPassword">
+              </td>
+              <td class="erros" style="border:none;color:red;" *ngIf="regOnlineCust.controls.confPassword.value != regOnlineCust.controls.password.value && regOnlineCust.controls.confPassword.touched">
+                ! Your passwords don't match.
+              </td>
+              <td class="erros" style="border:none;color:green;" *ngIf="regOnlineCust.controls.confPassword.value == regOnlineCust.controls.password.value && regOnlineCust.controls.confPassword.value != ''">
+                &#x2713; Your passwords match!
+              </td>
+            </tr>
+          </tbody>
+        </table>  
+        <div class="marketing">
+          <p>How would you like to receive your marketing communication from us?</p>
+          <div class="chkbx">
+            <input type="checkbox"> Email
+            <input type="checkbox"> SMS
+            <input type="checkbox"> Post
+          </div>
+          <p>Please read our terms and conditions. By registering you agree to accept them.</p>
+          <textarea disabled>Welcome to the Pick n Pay Website at www.picknpay.co.za. Please take a moment to read these terms and conditions including our policies (“Terms”) to understand how they apply to your use of our Website and any products or services that may you may order online. Please read the rules carefully. USE OF AND/OR REGISTRATION ON ANY ASPECT OF THE WEBSITE WILL CONSTITUTE YOUR AGREEMENT TO COMPLY WITH THESE RULES. If you cannot agree with these rules, please do not use the Website. In addition to reviewing this Agreement, please read our Privacy Policy and Copyright Policy. Your use of the Website constitutes agreement to their terms and conditions as well. If you have any questions regarding our Website, the Terms, products or services, please click here to contact us.
+            1. GENERAL TERMS
+            Who owns this Website?
+            The Pick n Pay Website at www.picknpay.co.za is owned and operated by Pick n Pay Retailers (Pty) Ltd (“Pick n Pay”), a company registered in the Republic of South Africa under company registration number 1973/004739/07, which has its registered office at 101 Rosmead Avenue, Kenilworth, 7708, Cape Town. Pick n Pay Retailers (Pty) Ltd is a subsidiary of Pick n Pay Stores Ltd, a public company listed on the Johannesburg Stock Exchange. All rights and/or defences afforded to us in these Terms shall stand to the benefit of our group companies.
+            Terms and conditions apply
+            These Terms apply to your use of this Website. By using this Website, you acknowledge that you have read and understood these Terms and agree to be bound by them. They represent our entire agreement with you and supersede all prior terms, conditions, warranties and/or representations to the extent permitted by law. Please do not use our Website if you do not agree to be bound by these Terms. Online purchases from our Website are subject to these Terms.
+            Amended or updated terms
+            We may periodically update or change the Terms without notice. You should check them from time to time, as your continued use of our Website will mean you accept any updated or revised Terms.
+            Law and arbitration
+            This agreement is governed by the laws of the Republic of South Africa. Any dispute arising in relation to our agreement with you shall, to the extent permitted by law, be referred to arbitration in Cape Town at a venue to be determined by us applying the Uniform Rules of the High Court of South Africa.
+            Use of our Website
+            You are welcome to browse or use our Website for your own personal, non-commercial shopping and information purposes only. No other use is permitted without our prior written consent. The unauthorised use, copying, reproduction, variation, modification or distribution of the content of this Website, the uploading of any unlawful or damaging information or viral software, or the creation of any links to our Website from any other site whatsoever, is strictly prohibited. Unless otherwise specified, the Website is intended for your personal use only. You may not authorise others to use the Website, and you are responsible for all use of the Website by you and by those you allow to use, or provide access to, the Website. You may not impersonate, imitate or pretend to be somebody else when using the Website. You may not provide to or post on or through the Website any graphics, text, photographs, images, video, audio or other material that constitutes junk mail, spam, advertising and/or commercial offers. You may not repeat the same posting multiple times in a day or week. You agree not to use any obscene, indecent, or offensive language or to provide to or post on or through the Website any graphics, text, photographs, images, video, audio or other material that is defamatory, abusive, bullying, harassing, racist, hateful or violent. You agree to refrain from ethnic slurs, religious intolerance, homophobia and personal attacks when using the Website. You agree not to use any sexually explicit language or to provide to or post on or through the Website any graphics, text, photographs, images, video, audio or other material that is sexually explicit. You may not provide to or post on or through the Website any graphics, text, photographs, images, video, audio or other material that is encrypted, invades anyone’s privacy, or illustrates, references or encourages conduct that would constitute a criminal offence, give rise to criminal liability or that otherwise violates any statute or regulation. You agree to use the Website only for lawful purposes and you acknowledge that your failure to do so may subject you to civil and criminal liability. You are responsible for ensuring that any graphics, text, photographs, images, video, audio or other material you provide to or post anywhere on the Website does not violate the copyright, trade mark, trade secret or any other personal or proprietary rights of any third party or is provided or posted with the permission of the owner/s of such rights. The Website may contain graphics, text, photographs, images, video, audio and other material that is clearly identified for your use(“Assets”). The Assets are protected by copyright, trade mark and other intellectual property laws. Nevertheless, we grant to you the limited, non-exclusive rights and license to use the Assets solely as described on the Website, as limited by this Agreement, and provided further that you keep intact any and all copyright and other proprietary notices. This includes the “look and feel” of the Website and the advertising thereon (“the Website Content”). The Website Content is protected by copyright, trade mark and other intellectual property laws and is the property of Pick n Pay and its authorized service providers. The copying, reproduction, publication, display, rearrangement, redistribution, modification, revision, alteration, cropping, re-sizing, reverse engineering, movement, removal, deletion, or other use or change by you, directly or indirectly, whether by omission or commission, of any such Website Content, including but not limited to the removal or alteration of advertising, is strictly prohibited. You may not in any way make commercial or other unauthorised use, by publication, re-transmission, distribution, performance, caching or otherwise, of material obtained through the Website except as permitted by statute or expressly permitted in writing by this Agreement or the Website. You agree not to disrupt, overwhelm, attack, modify, reverse engineer or interfere with the Website or its associated software, hardware and/or servers in any way, and you agree not to impede or interfere with others’ use of the Website. Other than connecting to our and our third party service provider’s servers by http requests using a Web browser, you may not attempt to gain access to our servers by any means, including, without limitation, by using administrator’s passwords or by masquerading as an administrator while using the Website or otherwise. You acknowledge that Pick n Pay and its third party service providers have not reviewed and do not endorse the content of all sites linked to and from this Website, and are not responsible for the content or actions of any sites linked to or from this Website. Linking to any service or site is at your sole risk. You agree to indemnify Pick n Pay against any loss, damage, harm, claim or any other cost whatsoever that we may sustain as a result of your use of our Website and/or its contents contrary to these Terms. We use cookies to identify the computer device with which you connect to our Website. We reserve the right to restrict your use and access to our Website or part thereof in the event of any unauthorized use. We reserve the right to suspend our Website or any part thereof or terminate your account at any time if we, in our sole discretion, determine that you are not using the Website in compliance with these Terms or if we believe the information provided by you is untrue, inaccurate or incomplete. Any indulgence of extension of time granted to you shall not be construed as a waiver or variation of any of our rights or remedies in these Terms or law.
+            Use of our Website outside South Africa
+            Customers who are not resident in South Africa are welcome to use our Website in accordance with these Terms to make online purchases provided that the delivery address is in South Africa.
+            Marketing
+            Click here to receive our newsletter and other marketing material. You are free to opt out of receiving our marketing material at any stage by clicking here. It may take up to one month for your profile to be updated.
+            Privacy policy and information security
+            Your privacy is very important to us and therefore any information that you upload on our Website including any payment card information will be stored on a secure server. Our secure server encrypts your identity number and payment card details in order to minimise the risk of unauthorised disclosure or interception. Our Website makes use of ‘cookies’ which collect data about the device that you use to access our Website. The cookies minimise the possibility of unauthorised access to, and disclosure of, your personal information. We will not disclose, sell or rent your personal information to third parties without your consent unless we are compelled to do so by law. We may do so if you have granted consent thereto. Whilst all reasonable efforts are taken to ensure that your personal information and/or credit card details are protected over the internet. We cannot guarantee the absolute security of any information you exchange with us.
+            Accuracy of Website content
+            All reasonable steps are taken to ensure that the information on our Website is accurate and up-to-date. We do not, however, warrant that the content or information displayed is always accurate, complete and/or current. Any comments uploaded by our users or any authorised experts invited as our guests are their opinions alone and do not in any way represent our views, opinions, beliefs or values. If you wish to make an investment decision regarding the Pick n Pay group of companies, kindly consult your stockbroker or financial adviser.
+            Your comments
+            We value your comments, ideas, suggestions and feedback ("your Comments") via our Website. We will not respond to, maintain or compensate you in any way whatsoever for your Comments. Once received, your Comments will become our property and we will not be limited in any way in the use, commercial or otherwise, of any of your Comments. Pick n Pay does not necessarily endorse, support, sanction, encourage, verify or agree with the comments, opinions or statements posted on forums, blogs or otherwise contained in the Website. Any information or material placed online, including advice and opinions, are the views and responsibilities of those who post the statements and do not necessarily represent the views of Pick n Pay or its third party service providers. You agree that Pick n Pay and its third party service providers are not responsible, and shall have no liability to you, with respect to any information or materials posted by others, including defamatory, offensive or illicit material, even material that violates this Agreement. You warrant that your Comments do not and will not violate the right(s) of any third party, including copyright, trademark, privacy or any other personal or proprietary right. You agree not to disclose, submit or offer any Comments that are or contain any defamatory, unlawful, abusive or obscene material. We disclaim any liability towards any third party regarding your Comments and you shall remain accountable towards any third party regarding any harm caused by your Comments.
+            Intellectual property
+            All rights, including copyright, trade mark and other intellectual property rights embodied in any logos, text, images, video, audio or other material on this Website are owned by or licensed to us. All data and information communicated to or from the Website including its database also belongs solely to us or our licensors. You agree to sign all documents as we may reasonably require in order to assign any rights that you may acquire in the content of our Website. You agree also to waive any moral rights in such content. You are permitted to view, print or store electronically a copy of any information on our Website, including these Terms, solely for your personal, lawful, non-commercial use. Unauthorised use, reproduction, modification and/or distribution is strictly prohibited and constitutes an unlawful infringement of our intellectual property rights.
+            Use of our logos, content and images
+            You are not permitted to use the content of our Website, our logos or any product or other images that appear on our Website without our prior written consent. Unauthorised use, reproduction, modification and/or distribution is strictly prohibited and constitutes an infringement of our or our licensors’ intellectual property rights.
+            Advertising and hyperlinks
+            External hyperlinks may appear on our Website. The hyperlinks may not be construed to constitute any relationship between us and any linked third party or any endorsement by us of such third party, and use of or reliance on any external links provided is at your own risk. Advertising and other promotional material of third parties may appear on our Website from time to time. We do not endorse such third parties or their products and/or services. Your reliance on any information contained in such material is entirely at your own risk.
+            Disclaimers and exclusions of liability
+            Use of our Website is entirely at your own risk. We make no representations or warranties of any kind, whether express or implied. We do not warrant that the functions provided by the Website will be uninterrupted or error free, or that the Website or the server that makes it available are free from viruses or other harmful components. We accept no liability, to the extent permitted by law, for any direct, indirect, incidental, special or consequential loss or damage of any kind whatsoever or howsoever caused arising from the access or use of our Website or the purchase of any of our products or services. You agree, to the extent permitted by law, to indemnify us against any loss or damage suffered or liability incurred by reason of any act or omission on your part or that of any third party acting on your behalf in connection with your use of our Website and/or your purchase of any products or services. Notwithstanding any other provisions contained herein, our liability arising from any breach of these Terms, negligence or otherwise shall not at any time exceed more than double the monetary value of any order placed via this Website.
+            Indemnification
+            You hereby indemnify Pick n Pay and its affiliates, employees, agents, representatives and third party service providers, and hereby defend and hold each of them harmless from any and all claims and liabilities (including legal costs on the attorney-client scale) which may arise from your submissions, from your unauthorised use of material obtained through the Website, or from your breach of this Agreement, or from any such acts through your use of the Website.
+            2. ONLINE SHOPPING TERMS
+            These online shopping terms and conditions apply to all purchases ordered online at www.picknpay.co.za. Please read them carefully and print a copy for future reference. You are required to register with us before placing your first order online. Please click on Register to complete the registration form. Registration and/or use of our online shopping Website constitute your acceptance and agreement to be bound by the Terms of our Website, including the additional online shopping terms below.
+            Online registration
+            Registration on our online shopping site is conditional upon your specified delivery address being within certain specified areas. If your delivery address is not in an area where we deliver, your registration will not be completed. After you have registered, should you change your delivery address to an address which is not in an area where deliver your order will not be accepted. To register you will be required to provide certain information including personal details, payment card details and your delivery address. When registering you will be required to choose a UserID and a password. Please keep your password private. Pick n Pay accepts no liability for any damages suffered or losses incurred from the use or misuse of your password. You will be required to enter your user ID and password each time you visit our online shopping site. To amend any registration particulars please click on “My Profile” and edit your details.
+            Product sales and availability
+            All products displayed on our Website are subject to availability and will be delivered only within the Republic of South Africa. All prices shown on our Website are quoted in South African Rands and are valid and effective only in the Republic of South Africa. We reserve the right to discontinue or change the specifications of our products and services from time to time without notice. We will inform you as soon as possible if any products or services ordered by you are not available.
+            Colours
+            We have made every effort to display as accurately as possible the colours of the products that appear on our Website. However, as the actual colours you see will depend on the device that you use to access our Website, we cannot warrant that your device’s display of any colour will be accurate.
+            Content errors
+            We regret that no order will be accepted if we identify a material error in the description of any of our goods or services or their prices on our Website. Packaging may vary from that shown on our Website.
+            No alcohol for sale to persons under 18 years
+            Alcohol can only be purchased by customers who are 18 years or older.
+            Pricing policy
+            You will be charged the prices as they are reflected on the Products in store at the point of sale, subject to availability. Certain of the Products are variable/random mass items. Whilst the average mass of the Product is indicated on the Online Shopping Site as a guide to the cost, the actual Product delivered to you may weigh slightly more or less than the average mass indicated. You will be charged the actual amount due in respect of the specific Product delivered to you. Prices include Value-Added Tax. Special promotions may be subject to certain conditions, including stock availability and limited offer stipulations. A delivery fee will be charged for each order placed by you. Please visit our Website to view the delivery fee applicable.
+            Methods of payment
+            We will debit the total value of your online order against the payment card tendered by you during the check out process. Payment will be effected on acceptance of your order and prior to delivery. By submitting your order, identity number and payment card details you warrant that you are over the age of 18 (eighteen), are authorised to make payment with the payment card and that there are sufficient funds available to pay for the order.
+            Stock availability
+            Pick n Pay cannot always guarantee availability of stock and will endeavour to deliver a substitute line where possible. If we are unable to supply each and every item ordered or in the quantities ordered, you nevertheless agree to accept delivery and make payment for the items correctly delivered.
+            Confirmation of orders
+            Orders placed online constitute your offer to purchase subject to these Terms. Your offer is deemed to have been accepted by us when you receive our confirmation of your order. Failure by us to formally confirm or notify acceptance shall not affect the validity of the sale or the enforceability thereof.
+            Delivery
+            Pick n Pay delivery timeslots are as follows: Monday - Friday: 09:00-15:00; 15:00-17:00 and 17:00-19:00. Saturday: 09:00-15:00; 15:00-17:00. There are NO deliveries on Sundays and Public Holidays. Deliveries are effected on the day following the placement of your order on our site unless you have chosen to accept delivery at a later date. The sale and delivery of liquor is subject to national and regional statutory regulations. Accordingly we may not accept orders for delivery of liquor where this is prohibited. Delivery slots where delivery of liquor is prohibited are indicated as such on the checkout page. Alcohol purchases will require proof of age on delivery. Failure to supply such proof will render the sale null and void. We only deliver to registered customers within certain specified delivery areas. On delivery of the order to the specified delivery address, you will receive our delivery note showing the items delivered, any substitute items, any non-available items, the delivery fees, Value-Added Tax and the amount debited from your payment card. For verification purposes, the person accepting delivery at the delivery address may be required to produce a form of identification. Any person other than yourself who receives the products at the delivery address is presumed to be authorised to accept delivery on your behalf. Should no-one be in attendance at the time of delivery, the driver will keep the products and leave a notice at the delivery address to this effect. The driver will attempt to contact you to make new arrangements for delivery or collection. We reserve the right to charge an additional delivery fee should it be required in the circumstances. Our liability for failing to deliver the products timeously is limited to delivery being effected at a later agreed time at no additional charge. Please arrange that you or your authorised representative is available to accept your purchases at the delivery address and that appropriate access will be made available. On delivery, we will require you or your authorised representative to sign and print your or their name on a duplicate copy of the delivery note, to confirm receipt. We have outsourced all delivery and collection arrangements. Accordingly, we cannot, to the extent permitted by law, be liable for any damage suffered or loss incurred by reason of any acts or omissions of the deliverer, its directors, employees, sub-contractors, agents, representatives and/or affiliates.
+            Refunds and returns policy
+            If you are for any reason dissatisfied with an item purchased from our Website you may return it to any Pick n Pay store for a full refund, replacement or exchange. For hygiene reasons underwear (excluding bras) and earrings for pierced ears may not be returned or exchanged. Gift cards purchased will not be refunded. Please note that Country Road and Trenery purchases may only be returned to Pick n Pay stores that
+            Cancellation
+            If for any reason you would like to cancel an order this may be done by visiting your Order History on our Website or by contacting our Customer Services Centre on +27 (0)860 30 30 30. You will only be able to cancel orders up to midnight on the day prior to the date of delivery. We reserve the right to debit your payment card for the delivery fees in respect of any late cancellations. If you cancel your payment for any reason or if your payment card should cease to be valid for whatever reason, you will nevertheless be bound to pay to the full purchase price, including all costs incurred by us relating to the recovery thereof. Without prejudice to any other rights or remedies in law, we reserve the right to cancel forthwith any sale and/or your registration in the event of your breach any of the Terms.
+            Risk and ownership
+            Risk in the products shall pass to you or your authorized representative on delivery. We will retain ownership in the products until payment has been received in full.
+          </textarea>
+        </div>
+        <button type="submit">ACCEPT AND REGISTER</button>
+      </form>
+    </div>
+  </div>
+</div>

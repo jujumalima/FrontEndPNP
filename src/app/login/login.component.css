@@ -1,0 +1,94 @@
+.login {
+    width: 100%;
+    margin-top: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a9a9a9;
+}
+
+.login h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login form {
+    margin-top: 25px;
+}
+.login form table {
+    margin-left: 30%;
+    width: 40%;
+}
+
+.login form table tr td {
+    border: solid 1px #ebebeb;
+    height: 30px;
+}
+
+.login form table tr .td1 {
+    width: 33%;
+}
+
+.login form table tr td label {
+    color: #808080;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 16px;
+    padding-left: 10px;
+}
+
+.login form table tr td input {
+    border: none;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+}
+
+.login button {
+    margin-left: 1px;
+    border: none;
+    width: 12.2%;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.login .btn1 {
+    margin-left: 37.7%;
+    float: left;
+    background-color: #991F41;
+}
+
+.login .btn2 {
+    margin-right: 37.7%;
+    background-color: #0F3356;
+    float: right;
+}
+
+.login .tip {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 0;
+    padding: 0;
+    color: #575757;
+    font-size: 10px;
+}
+
+.login a,
+a:hover {
+    opacity: 1;
+    color: #004579;
+    text-decoration: underline;
+}
+
+.errors {
+    margin-top: 20px;
+    color: #d46464;
+    font-size: 12px;
+    text-align: center;
+}

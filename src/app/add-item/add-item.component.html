@@ -1,0 +1,43 @@
+<button mat-button  (click)="logout()"><!--routerLink="/app-update-item"--><!--Click to update an Item--> LOGOUT<mat-icon>update</mat-icon></button>
+<app-login-header></app-login-header>
+
+<div class="add">
+  
+  <mat-select placeholder="Select Product Name" name="product">
+    <mat-option (click)="slctProd(0)">None</mat-option>
+    <mat-option *ngFor="let prod of product" value={{prod.id}} (click)="slctProd(prod.id)">
+      {{prod.name}}
+    </mat-option>
+  </mat-select>
+
+  <form class="item" *ngIf="prds > 0" [formGroup]="addItem" (submit)="setItem()">
+      <p>Barcode:</p>
+        <input type="number" max="13" min="13"  id="barcode" name="barcode" formControlName="barcode" required>
+    <br/>
+      <p>Brand:</p>
+        <input type="text" id="brand" name="brand" formControlName="brand" required>
+    <br/>
+      <p>Image:</p>
+      <br/>
+        <input type="file" id="image" name="image" formControlName="image" style="margin-left:235px;" required>
+    <br/>
+      <p>Name:</p>
+        <input type="text" id="name" name="name" formControlName="name" required>
+    <br/>
+      <p>Price:</p>
+        <input type="number" id="price" name="price" formControlName="price" required>
+    <br/>
+      <p>Unit:</p>
+        <input type="number" id="unit" name="unit" formControlName="unit" required>
+    <br/>
+      <p>Weight:</p>
+        <input type="text" id="weight" name="weight" formControlName="weight" required>
+
+    <br/>
+
+    <div *ngFor="let i of items">
+      
+    </div>
+    <button mat-button>ADD PRODUCT</button>
+  </form>
+</div>

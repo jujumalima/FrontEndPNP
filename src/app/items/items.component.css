@@ -1,0 +1,127 @@
+.itm {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 2px;
+}
+
+/*.itm .filterLft {
+    width: 23%;
+    margin-bottom: 30px;
+    float: left;
+}
+
+.itm .filterLft .filter {
+    width: 100%;
+    border: solid 1px #cccccc;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.itm .filterLft .filter label {
+    border-bottom: solid 1px #cccccc;
+    width: 100%;
+    height: 40px;
+    padding-top: 3%;
+    padding-left: 5%;
+    background-color: #f2f2f2;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.itm .filterLft .filter .more {
+    background-color: transparent;
+    border:none; 
+    border-top: solid 1px #cccccc;
+    margin-bottom: 0;
+    text-align: center;
+}
+*/
+.itm .items {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 0;
+    border: solid 1px #fff;
+}
+
+.itm .items .filterTop {
+    widows: 100%;
+    background-color: #f2f2f2;
+    margin-right: 12px;
+    height: 40px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.itm .items .item {
+    border: 1px solid #cccccc;
+    width: 31%;
+    margin-right: 12px;
+    margin-left: 0;
+    display: inline-block;
+    height: 385px !important;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+    padding: 10px;
+}
+
+.itm .items .item p {
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 10px;
+    height: 50px;;
+}
+/*
+.itm .fltRight {
+    right: 50px;
+    width: 23%;
+    z-index: -1;
+    position: fixed;
+}
+
+.itm .fltRight .ss {
+    width: 100%;
+    border: none;
+    height: 63px;
+    background: url("/app/images/aisle/ss.JPG") 0 0 no-repeat;
+    background-color: #3374b6;
+}
+
+.itm .fltRight .delivery {
+    margin-top: 20px;
+    width: 100%;
+}*/
+
+.itm .items .normalPrice {
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.itm .items .normalPrice span {
+	font-size: 10px;
+	position: relative;
+	top: -6px;
+	left: 1px;
+}
+
+.itm .items button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.itm .item .trolley {
+    width: 100%;
+    padding-right: 20px;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #b9154a;
+    font-size: 15px;
+}
